@@ -1,0 +1,40 @@
+<div id="search-component">
+  <h4>訂票查詢系統</h4>
+  <div>
+    <label>姓名</label>
+    <input #searchBox id="search-box" (keyup)="search(searchBox.value)" />
+  </div>
+
+  <div class="showBooking">
+    <div *ngFor="let booking of heroes | async" class="search-result" >
+          <div class="row">
+            <div class="col-xs-3">電影</div>
+            <div class="col-xs-9  pull-left">{{ booking.movieName }}</div>
+          </div>
+          <div class="row">
+            <div class="col-xs-3">日期</div>
+            <div class="col-xs-9 pull-left">{{ booking.date }}</div>
+          </div>
+          <div class="row">
+            <div class="col-xs-3">時段</div>
+            <div class="col-xs-9 pull-left">{{ booking.time }}</div>
+          </div>
+          <div class="row">
+            <div class="col-xs-3">座位</div>
+            <div class="col-xs-9 pull-left">{{ booking.seat }}</div>
+          </div>
+          <div class="row">
+            <div class="col-xs-3">姓名</div>
+            <div class="col-xs-9  pull-left">{{ booking.name }}</div>
+          </div>
+          <div class="row">
+            <div class="col-xs-3">電話</div>
+            <div class="col-xs-9 pull-left">{{ booking.number }}</div>
+          </div>
+          <div class="row">
+            <div class="col-xs-3">Email</div>
+            <div class="col-xs-9 pull-left">{{ booking.email }}</div>
+          </div>
+    </div>
+  </div>
+</div>

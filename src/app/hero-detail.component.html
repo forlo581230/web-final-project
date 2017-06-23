@@ -1,0 +1,39 @@
+<div *ngIf="hero" class="main">
+  <div class="movie-content">
+    <div class="movie-title">
+      <h1 class="under-line">{{hero.name}}</h1>
+    </div>
+    <div class="movie-detail">
+
+      <div class="movie-img">
+        <img src={{hero.image2}} height=351 class="pic"/>
+      </div>
+      <div class="movie-info">
+        <ul>
+          <li class="is-yellow">影片資訊</li>
+          <li>上映日期：{{details[hero.id].date}}</li>
+          <li>發行商：{{details[hero.id].comp}}</li>
+          <li>語言：{{details[hero.id].lang}}</li>
+          <li>片長：{{details[hero.id].time}}</li>
+          <li>級數：{{details[hero.id].level}}</li>
+          <li>導演：{{details[hero.id].director}}</li>
+          <li>演員：{{details[hero.id].actor}}</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="movie-summary">
+      <h3 class="is-yellow">劇情簡介：</h3>
+      <div class="movie-article">
+            {{details[hero.id].article}}
+      </div>
+    </div>
+  </div>
+
+
+  <a [routerLink]="['/form', hero.id]"  class="col">
+  <button class="module hero">
+    訂票
+  </button>
+  </a>
+</div>

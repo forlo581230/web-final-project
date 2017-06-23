@@ -1,0 +1,193 @@
+<div class="container">
+  <div [hidden]="submitted">
+      <div class="choose-area">
+      <div class="screen">銀幕方向</div>
+      <div class="color-group">
+        <div class="color-info free OO"><i class="fa fa-circle"></i>可選座位</div>
+        <div class="color-info selected X"><i class="fa fa-circle"></i>您選擇的座位</div>
+      </div>
+
+      <div class="seats">
+        <div class="row">
+          <div class=col></div>
+            <div class=col>9</div>
+            <div class=col>8</div>
+            <div class=col>7</div>
+            <div class=col>6</div>
+            <div class=col>5</div>
+            <div class=col>4</div>
+            <div class=col>3</div>
+            <div class=col>2</div>
+            <div class=col>1</div>
+        </div>
+          <div class="row">
+            <div class=col >A</div>
+            <div class=col [ngClass]="{true: 'X', false: 'O'}[seats[1][1]]" (click)="select(1, 1)"></div>
+            <div class=col [ngClass]="{true: 'X', false: 'O'}[seats[1][2]]" (click)="select(2, 1)"></div>
+            <div class=col [ngClass]="{true: 'X', false: 'O'}[seats[1][3]]" (click)="select(3, 1)"></div>
+            <div class=col [ngClass]="{true: 'X', false: 'O'}[seats[1][4]]" (click)="select(4, 1)"></div>
+            <div class=col [ngClass]="{true: 'X', false: 'O'}[seats[1][5]]" (click)="select(5, 1)"></div>
+            <div class=col [ngClass]="{true: 'X', false: 'O'}[seats[1][6]]" (click)="select(6, 1)"></div>
+            <div class=col [ngClass]="{true: 'X', false: 'O'}[seats[1][7]]" (click)="select(7, 1)"></div>
+            <div class=col [ngClass]="{true: 'X', false: 'O'}[seats[1][8]]" (click)="select(8, 1)"></div>
+            <div class=col [ngClass]="{true: 'X', false: 'O'}[seats[1][9]]" (click)="select(9, 1)"></div>
+          </div>
+          <div class="row">
+            <div class=col >B</div>
+            <div class=col [ngClass]="{true: 'X', false: 'O'}[seats[2][1]]" (click)="select(1, 2)"></div>
+            <div class=col [ngClass]="{true: 'X', false: 'O'}[seats[2][2]]" (click)="select(2, 2)"></div>
+            <div class=col [ngClass]="{true: 'X', false: 'O'}[seats[2][3]]" (click)="select(3, 2)"></div>
+            <div class=col [ngClass]="{true: 'X', false: 'O'}[seats[2][4]]" (click)="select(4, 2)"></div>
+            <div class=col [ngClass]="{true: 'X', false: 'O'}[seats[2][5]]" (click)="select(5, 2)"></div>
+            <div class=col [ngClass]="{true: 'X', false: 'O'}[seats[2][6]]" (click)="select(6, 2)"></div>
+            <div class=col [ngClass]="{true: 'X', false: 'O'}[seats[2][7]]" (click)="select(7, 2)"></div>
+            <div class=col [ngClass]="{true: 'X', false: 'O'}[seats[2][8]]" (click)="select(8, 2)"></div>
+            <div class=col [ngClass]="{true: 'X', false: 'O'}[seats[2][9]]" (click)="select(9, 2)"></div>
+          </div>
+          <div class="row">
+            <div class=col >C</div>
+            <div class=col [ngClass]="{true: 'X', false: 'O'}[seats[3][1]]" (click)="select(1, 3)"></div>
+            <div class=col [ngClass]="{true: 'X', false: 'O'}[seats[3][2]]" (click)="select(2, 3)"></div>
+            <div class=col [ngClass]="{true: 'X', false: 'O'}[seats[3][3]]" (click)="select(3, 3)"></div>
+            <div class=col [ngClass]="{true: 'X', false: 'O'}[seats[3][4]]" (click)="select(4, 3)"></div>
+            <div class=col [ngClass]="{true: 'X', false: 'O'}[seats[3][5]]" (click)="select(5, 3)"></div>
+            <div class=col [ngClass]="{true: 'X', false: 'O'}[seats[3][6]]" (click)="select(6, 3)"></div>
+            <div class=col [ngClass]="{true: 'X', false: 'O'}[seats[3][7]]" (click)="select(7, 3)"></div>
+            <div class=col [ngClass]="{true: 'X', false: 'O'}[seats[3][8]]" (click)="select(8, 3)"></div>
+            <div class=col [ngClass]="{true: 'X', false: 'O'}[seats[3][9]]" (click)="select(9, 3)"></div>
+          </div>
+          <div class="row">
+            <div class=col >D</div>
+            <div class=col [ngClass]="{true: 'X', false: 'O'}[seats[4][1]]" (click)="select(1, 4)"></div>
+            <div class=col [ngClass]="{true: 'X', false: 'O'}[seats[4][2]]" (click)="select(2, 4)"></div>
+            <div class=col [ngClass]="{true: 'X', false: 'O'}[seats[4][3]]" (click)="select(3, 4)"></div>
+            <div class=col [ngClass]="{true: 'X', false: 'O'}[seats[4][4]]" (click)="select(4, 4)"></div>
+            <div class=col [ngClass]="{true: 'X', false: 'O'}[seats[4][5]]" (click)="select(5, 4)"></div>
+            <div class=col [ngClass]="{true: 'X', false: 'O'}[seats[4][6]]" (click)="select(6, 4)"></div>
+            <div class=col [ngClass]="{true: 'X', false: 'O'}[seats[4][7]]" (click)="select(7, 4)"></div>
+            <div class=col [ngClass]="{true: 'X', false: 'O'}[seats[4][8]]" (click)="select(8, 4)"></div>
+            <div class=col [ngClass]="{true: 'X', false: 'O'}[seats[4][9]]" (click)="select(9, 4)"></div>
+          </div>
+          <div class="row">
+            <div class=col >E</div>
+            <div class=col [ngClass]="{true: 'X', false: 'O'}[seats[5][1]]" (click)="select(1, 5)"></div>
+            <div class=col [ngClass]="{true: 'X', false: 'O'}[seats[5][2]]" (click)="select(2, 5)"></div>
+            <div class=col [ngClass]="{true: 'X', false: 'O'}[seats[5][3]]" (click)="select(3, 5)"></div>
+            <div class=col [ngClass]="{true: 'X', false: 'O'}[seats[5][4]]" (click)="select(4, 5)"></div>
+            <div class=col [ngClass]="{true: 'X', false: 'O'}[seats[5][5]]" (click)="select(5, 5)"></div>
+            <div class=col [ngClass]="{true: 'X', false: 'O'}[seats[5][6]]" (click)="select(6, 5)"></div>
+            <div class=col [ngClass]="{true: 'X', false: 'O'}[seats[5][7]]" (click)="select(7, 5)"></div>
+            <div class=col [ngClass]="{true: 'X', false: 'O'}[seats[5][8]]" (click)="select(8, 5)"></div>
+            <div class=col [ngClass]="{true: 'X', false: 'O'}[seats[5][9]]" (click)="select(9, 5)"></div>
+          </div>
+          <div class="row">
+            <div class=col >F</div>
+            <div class=col [ngClass]="{true: 'X', false: 'O'}[seats[6][1]]" (click)="select(1, 6)"></div>
+            <div class=col [ngClass]="{true: 'X', false: 'O'}[seats[6][2]]" (click)="select(2, 6)"></div>
+            <div class=col [ngClass]="{true: 'X', false: 'O'}[seats[6][3]]" (click)="select(3, 6)"></div>
+            <div class=col [ngClass]="{true: 'X', false: 'O'}[seats[6][4]]" (click)="select(4, 6)"></div>
+            <div class=col [ngClass]="{true: 'X', false: 'O'}[seats[6][5]]" (click)="select(5, 6)"></div>
+            <div class=col [ngClass]="{true: 'X', false: 'O'}[seats[6][6]]" (click)="select(6, 6)"></div>
+            <div class=col [ngClass]="{true: 'X', false: 'O'}[seats[6][7]]" (click)="select(7, 6)"></div>
+            <div class=col [ngClass]="{true: 'X', false: 'O'}[seats[6][8]]" (click)="select(8, 6)"></div>
+            <div class=col [ngClass]="{true: 'X', false: 'O'}[seats[6][9]]" (click)="select(9, 6)"></div>
+          </div>
+      </div>
+    </div>
+    <!-- choose-area-->
+    <div class="form">
+      <form (ngSubmit)="onSubmit()" #heroForm="ngForm" class="form-table">
+        <div class="form-group">
+          <h1>電影名稱:{{hero.name}}</h1>
+        </div>
+
+        <div class="form-group">
+          <label for="Date">日期</label>
+          <select class="form-control" id="Date"
+                  required
+                  [(ngModel)]="Date" name="Date">
+            <option *ngFor="let Date of hero.date" [value]="Date">{{Date}}</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="time">時段</label>
+          <select class="form-control" id="time"
+                  required
+                  [(ngModel)]="model.time" name="time">
+            <option *ngFor="let time of hero.time" [value]="time">{{time}}</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="name">姓名</label>
+          <input type="text" class="form-control" id="name"
+                 required
+                 [(ngModel)]="model.name" name="name">
+        </div>
+
+        <div class="form-group">
+          <label for="number">電話</label>
+          <input type="text" class="form-control" id="number"
+                 required
+                 [(ngModel)]="model.number" name="number">
+        </div>
+
+        <div class="form-group">
+          <label for="email">信箱</label>
+          <input type="text" class="form-control" id="email"
+                 required
+                 [(ngModel)]="model.email" name="email">
+        </div>
+
+        <button type="submit" class="btn btn-success" [disabled]="!heroForm.form.valid">確定</button>
+       <!-- NOT SHOWN IN DOCS -->
+        <div>
+          <hr>
+          {{noise}}
+        </div>
+       <!-- - -->
+      </form>
+      <div class="pic">
+        <img src={{hero.image}} height="186" />
+      </div>
+    </div>
+  </div>
+
+  <div [hidden]="!submitted">
+    <div class="showBooking">
+      <h2>請確認以下個人資料</h2>
+      <div class="row">
+        <div class="col-xs-3">電影</div>
+        <div class="col-xs-9  pull-left">{{ hero.name }}</div>
+      </div>
+      <div class="row">
+        <div class="col-xs-3">日期</div>
+        <div class="col-xs-9 pull-left">{{ Date }}</div>
+      </div>
+      <div class="row">
+        <div class="col-xs-3">時段</div>
+        <div class="col-xs-9 pull-left">{{ model.time }}</div>
+      </div>
+      <div class="row">
+        <div class="col-xs-3">座位</div>
+        <div class="col-xs-9 pull-left">{{ model.seat }}</div>
+      </div>
+      <div class="row">
+        <div class="col-xs-3">姓名</div>
+        <div class="col-xs-9  pull-left">{{ model.name }}</div>
+      </div>
+      <div class="row">
+        <div class="col-xs-3">電話</div>
+        <div class="col-xs-9 pull-left">{{ model.number }}</div>
+      </div>
+      <div class="row">
+        <div class="col-xs-3">Email</div>
+        <div class="col-xs-9 pull-left">{{ model.email }}</div>
+      </div>
+
+      <br>
+      <button class="btn btn-primary"  (click)="add(hero.name, Date, model.time, model.seat, model.name, model.number, model.email);">送出</button>
+    </div>
+  </div>
+</div>
